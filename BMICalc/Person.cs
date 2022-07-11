@@ -23,26 +23,10 @@ namespace BMICalc
             this.Category = CategorizeBMI(this);
         }
 
-        public float Mass
-        {
-            get => mass;
-            set => mass = value;
-        }
-        public float Height
-        {
-            get => height;
-            set => height = value;
-        }
-        public float Bmi
-        {
-            get => bmi;
-            set => bmi = value;
-        }
-        public Category Category
-        {
-            get => category;
-            set => category = value;
-        }
+        public float Mass { get => mass; set => mass = value; }
+        public float Height { get => height; set => height = value; }
+        public float Bmi { get => bmi; set => bmi = value; }
+        public Category Category { get => category; set => category = value; }
 
         public Category CategorizeBMI(Person p)
         {
