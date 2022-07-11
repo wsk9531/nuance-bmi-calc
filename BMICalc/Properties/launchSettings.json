@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BMICalc": {
+      "commandName": "Project",
+      "commandLineArgs": "180cm 75kg"
+    }
+  }
+}
