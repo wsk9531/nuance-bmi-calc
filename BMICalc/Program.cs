@@ -19,7 +19,8 @@ namespace BMICalc // Note: actual namespace depends on the project name.
                 // Parse command line args
                 if (args.Length != 2)
                 {
-                    
+                    Usage();
+                    throw new FormatException("ERROR: Incorrect # args!");
                 }
                 string allArgs = args[0].ToLower() + args[1].ToLower();
                 Regex regx = new(@"([\d]+)([\D]+)([\d]+)([\D]+)", RegexOptions.IgnoreCase);
@@ -55,10 +56,6 @@ namespace BMICalc // Note: actual namespace depends on the project name.
          * This is achieved by converting them to metric internally up front, so that there is one simple numerical representation of an attribute in our program.
          * 
          * Note: matches[0] unused, will always be the original match.
-         * 
-         * Comment for Caleb: This code is pretty disgusting with the amount of repetition, ToString invocations.
-         * If I were to do this again, I might look to using regex to extract the pairs (attributeUnitofMeasure, Value) and place them into something easier to handle like a dict["kg"]
-         * It's jank but works with my regex method of parsing input, and I'm prioritising spending minimal extra time on this.
          * 
          */
         
