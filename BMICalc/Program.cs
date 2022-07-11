@@ -38,7 +38,7 @@ namespace BMICalc // Note: actual namespace depends on the project name.
                 // Output
                 Console.WriteLine("*");
                 Console.WriteLine("*");
-                Console.WriteLine(person.stringify());
+                Console.WriteLine(person.Stringify());
                 Console.WriteLine("*");
                 Console.WriteLine("*");
 
