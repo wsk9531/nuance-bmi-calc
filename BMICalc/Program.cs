@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
+// Console.WriteLine("Hello, World!");
 
 
 using System;
@@ -11,6 +11,13 @@ namespace BMICalc // Note: actual namespace depends on the project name.
     {
         private const float INCHESTOCENTIMETERS = 2.54f;
         private const float POUNDSTOKILOGRAMS = 0.454f;
+
+        private static void Usage()
+        {
+            Console.WriteLine("Usage: <height> <weight>");
+            Console.WriteLine("Example: 180cm 75kg");
+            Console.WriteLine("Permitted Units: Metric: kg and cm, Imperial: lbs and in");
+        }
 
         static void Main(string[] args)
         {
@@ -99,13 +106,6 @@ namespace BMICalc // Note: actual namespace depends on the project name.
             }
 
             return new Person(mass, height);
-        }
-
-        private static void Usage()
-        {
-            Console.WriteLine("Usage: <height> <weight>");
-            Console.WriteLine("Example: 180cm 75kg");
-            Console.WriteLine("Permitted Units: Metric: kg and cm, Imperial: lbs and in");
         }
     }
 }
